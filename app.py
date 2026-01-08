@@ -823,3 +823,9 @@ if __name__ == "__main__":
             logging.info("Restarting the entire application in 5 seconds...")
             time.sleep(5)
             restart_program()
+
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
